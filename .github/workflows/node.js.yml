@@ -27,9 +27,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: "./pokemonencyclopedia/package-lock.json"
     - name: Setup npm ci
-      working-directory: ./pokemonencyclopedia
+      with: 
+        cache-dependency-path: "./pokemonencyclopedia/package-lock.json"
       run: npm ci
       
     - run: npm run build --if-present
