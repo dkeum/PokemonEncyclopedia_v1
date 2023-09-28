@@ -27,7 +27,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-
+        cache-dependency-path: "./pokemonencyclopedia/package-lock.json"
     - run: | 
         cd ./pokemonencyclopedia
         npm ci
