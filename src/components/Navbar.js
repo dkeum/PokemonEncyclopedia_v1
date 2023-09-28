@@ -17,15 +17,15 @@ const NavBar = () => {
             <div className="ms-5"> {/* Use ms-3 class for left margin */}
               <Nav className="me-auto">
                 
-              <LinkContainer to="/">
+              <LinkContainer to="/PokemonEncyclopedia_v1">
                 <Nav.Link className="border border-dark rounded ms-2 bg-light">Home</Nav.Link>
               </LinkContainer>
 
-                <LinkContainer to="/pokemonencyclopedia">
+                <LinkContainer to="/PokemonEncyclopedia_v1/pokemonencyclopedia">
                   <Nav.Link className="border border-dark rounded ms-2 bg-light">Pokemon Encyclopedia</Nav.Link>
                 </LinkContainer>
                
-                <LinkContainer to="/pokemonminigame">
+                <LinkContainer to="/PokemonEncyclopedia_v1/pokemonminigame">
                   <Nav.Link className="border border-dark rounded ms-2 bg-light">Pokemon MiniGame</Nav.Link>
                 </LinkContainer>
                 
