@@ -14,8 +14,9 @@ function App() {
           <NavBar/>
           <Routes>
               <Route path="/" element={<HomePage/>}/>
-              <Route path="/pokemonencyclopedia" element={<PokemonEncyclopedia/>}/>
-              <Route path="/pokemonminigame" element={<PokemonMiniGame/>}/> 
+              <Route path="/PokemonEncyclopedia_v1" element={<HomePage/>}/>
+              <Route path="/PokemonEncyclopedia_v1/pokemonencyclopedia" element={<PokemonEncyclopedia/>}/>
+              <Route path="/PokemonEncyclopedia_v1/pokemonminigame" element={<PokemonMiniGame/>}/> 
           </Routes>
         </div>
          <Footer/>
