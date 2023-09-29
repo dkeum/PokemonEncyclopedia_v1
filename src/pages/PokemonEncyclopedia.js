@@ -41,7 +41,7 @@ const PokemonEncyclopedia = () =>{
     const searchPokemon = useCallback((pokemon)=>{
         setPokemon(pokemon);
         setPokemonSearchData(sortedPokemon);
-     },[pokemon,sortedPokemon]);
+     },[sortedPokemon]);
 
     
       return (
