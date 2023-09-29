@@ -4,8 +4,10 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import HomePage from './pages/HomePage';
 import PokemonEncyclopedia from './pages/PokemonEncyclopedia';
 import PokemonMiniGame from './pages/PokemonMiniGame';
+import PokemonInfo from './pages/PokemonInfo';
 import NavBar from './components/Navbar';
 import Footer from './components/Footer';
+
 
 function App() {
   return (
@@ -16,7 +18,7 @@ function App() {
               <Route path="/" element={<HomePage/>}/>
               <Route path="/PokemonEncyclopedia_v1" element={<HomePage/>}/>
               <Route path="/PokemonEncyclopedia_v1/pokemonencyclopedia" element={<PokemonEncyclopedia/>}/>
-              <Route path="/PokemonEncyclopedia_v1/pokemonencyclopedia/:pokemonId" element={<PokemonEncyclopedia/>}/>
+              <Route path="/PokemonEncyclopedia_v1/pokemonencyclopedia/:pokemonId" element={<PokemonInfo/>}/>
               <Route path="/PokemonEncyclopedia_v1/pokemonminigame" element={<PokemonMiniGame/>}/> 
           </Routes>
         </div>

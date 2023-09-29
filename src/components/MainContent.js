@@ -11,7 +11,6 @@ const MainContent = () =>{
                 <img src={require("../assets/blastoise-mega.gif")} alt="blastoise" />
                 <img src={require("../assets/charizard.gif")} alt="charizard" />
                 <img src={require("../assets/venusaur-mega.gif")} alt="venusaur" />
-            
             </div>
         </>
     );
