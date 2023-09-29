@@ -41,8 +41,6 @@ const PokemonEncyclopedia = () =>{
     const searchPokemon = useCallback((pokemon)=>{
         setPokemon(pokemon);
         setPokemonSearchData(sortedPokemon);
-        console.log("searchdata");
-        console.log(pokemonSearchData);
      },[pokemon,sortedPokemon]);
 
     
