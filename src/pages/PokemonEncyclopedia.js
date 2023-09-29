@@ -1,14 +1,11 @@
 // import { useQuery } from "react-query";
-import { useState,useEffect} from "react";
 import axios from "axios";
+import { useState, useEffect} from "react";
 import LoadPokemonData from "../components/LoadPokemonCard";
 
 const PokemonEncyclopedia = () =>{
     // const [pokemon, setPokemon] = useState("pikachu");
     const [pokemonData, setPokemonData] = useState([]);
-    
-
-
     const handleChange = (e) => {
         // setPokemon(e.target.value.toLowerCase());
       };
