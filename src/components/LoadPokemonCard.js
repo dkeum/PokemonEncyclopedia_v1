@@ -4,16 +4,14 @@ const LoadPokemonData = (props) =>{
 
     const {pokemons} = props;
 
-    // console.log(pokemons);
-
     return(
         <>
         {pokemons.map((data,i) => (
               <div className="container">
               
-                <img key={data.name} src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.url.substring(34, 34+Math.abs(data.url.length-36+1))}.png`} alt="pokemon" />
+                <img key={`${data.url.substring(34, 34+Math.abs(data.url.length-36+1))}`} src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.url.substring(34, 34+Math.abs(data.url.length-36+1))}.png`} alt="pokemon" />
             
-                <h2 key={i} >{data.name.charAt(0).toUpperCase() + data.name.slice(1)}</h2>
+                <h2 key={`${data.name}`} >{data.name.charAt(0).toUpperCase() + data.name.slice(1)}</h2>
                 {/* <div className="divTable">
                   <div className="divTableBody">
                     <div className="divTableRow">
