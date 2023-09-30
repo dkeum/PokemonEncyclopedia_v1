@@ -64,6 +64,7 @@ const PokemonMiniGame = () =>{
         let randomNumber = Math.floor(Math.random()*811);
         setRandomPokemonURL(pokemonData[randomNumber].url);
         setRandomPokemon(pokemonData[randomNumber].name);
+        setGuessedPokemon("");
         setNumOfTries(5);
         setGameEnded(!gameEnded);
     }
@@ -83,9 +84,10 @@ const PokemonMiniGame = () =>{
              <input 
                 type="text"
                 placeholder="Guess the Pokemon here"
+                value={guessedPokemon}
                 onChange={(e) => setGuessedPokemon(e.target.value)} // Update state when input changes
                 />
-                {numOfTries === 0 && <button onClick={buttonHandler}> Play Again?</button>}
+                {numOfTries === 0 && <button onClick={buttonHandler}>Play Again?</button>}
              </form>
         </>
     );
