@@ -1,5 +1,6 @@
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 import Col from 'react-bootstrap/Col';
 import {LinkContainer} from 'react-router-bootstrap'
@@ -24,10 +25,24 @@ const NavBar = () => {
                 <LinkContainer to="/PokemonEncyclopedia_v1/pokemonencyclopedia">
                   <Nav.Link className="border border-dark rounded ms-2 bg-light">Pokemon Encyclopedia</Nav.Link>
                 </LinkContainer>
-               
-                <LinkContainer to="/PokemonEncyclopedia_v1/pokemonminigame">
-                  <Nav.Link className="border border-dark rounded ms-2 bg-light">Pokemon MiniGame</Nav.Link>
+
+
+                <LinkContainer to="/PokemonEncyclopedia_v1/team-builder">
+                  <Nav.Link className="border border-dark rounded ms-2 bg-light">Team Builder</Nav.Link>
                 </LinkContainer>
+
+                <NavDropdown title="MiniGames" id="basic-nav-dropdown" className="border border-dark rounded ms-2 bg-light">
+                  <LinkContainer to="/PokemonEncyclopedia_v1/pokemon-game">
+                    <NavDropdown.Item >Guess the Pokemon</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/PokemonEncyclopedia_v1/pokemon-image-game">
+                    <NavDropdown.Item>Guess the Pokemon from Image</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to="/PokemonEncyclopedia_v1/pokemon-word-game">
+                    <NavDropdown.Item >Guess the Pokemon from Word</NavDropdown.Item>
+                  </LinkContainer>
+
+                </NavDropdown>
                 
               </Nav>
             </div>
