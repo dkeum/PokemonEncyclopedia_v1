@@ -33,11 +33,6 @@ const GuessThePokemonImage = () =>{
          },[]);
 
 
-    // const style ={
-    //    opacity: `${(numOfTries*20)}%` 
-    //    //black image filter
-    // }
-
     useEffect(() => {
         if(gameEnded){
             let randomNumber = Math.floor(Math.random()*811);
@@ -87,7 +82,7 @@ const GuessThePokemonImage = () =>{
              { randomPokemonURL && numOfTries === 0 &&
                 <>
                     <img width="300px" height="300px" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${randomPokemonURL.substring(34, 34+Math.abs(randomPokemonURL.length-36+1))}.png`} alt="guess the pokemon"/>
-                    <h>It's {randomPokemon} !!!</h>
+                    <h1>It's {randomPokemon} !!!</h1>
                 </>
              }
 
@@ -96,7 +91,6 @@ const GuessThePokemonImage = () =>{
                 : <></>// :  <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png`} alt="guess the pokemon"/>
                   }
              
-            
              {numOfTries !== 0 && 
              <form onSubmit={onSubmitHandler}>
              <input 
