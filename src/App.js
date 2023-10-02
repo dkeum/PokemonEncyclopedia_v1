@@ -8,7 +8,7 @@ import PokemonInfo from './pages/PokemonInfo';
 import GuessThePokemonImage from './pages/GuessThePokemonImage';
 import GuessThePokemonWord from './pages/GuessThePokemonWord';
 import PokemonTeamBuilder from './pages/PokemonTeamBuilder';
-import NavBar from './components/Navbar';
+import  Navbar  from './components/Navbar';
 import Footer from './components/Footer';
 
 
@@ -16,7 +16,7 @@ function App() {
   return (
       <BrowserRouter>
         <div id="page-body">
-          <NavBar/>
+          <Navbar/>
           <Routes>
               <Route path="/" element={<HomePage/>}/>
               <Route path="/PokemonEncyclopedia_v1" element={<HomePage/>}/>
@@ -28,7 +28,8 @@ function App() {
               <Route path="/PokemonEncyclopedia_v1/pokemon-word-game" element={<GuessThePokemonWord/>}/>
           </Routes>
         </div>
-         <Footer/>
+
+        <Footer/>
       </BrowserRouter>
   );
 }

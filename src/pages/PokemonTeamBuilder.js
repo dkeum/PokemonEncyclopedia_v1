@@ -1,6 +1,7 @@
 import Searchbox from "../components/SearchBox";
 import { Container, Col, Row } from "react-bootstrap";
 
+
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -51,38 +52,40 @@ const PokemonTeamBuilder = () => {
   return (
     <>
     {/* searchPokemon={searchPokemon} pokemon={pokemon} */}
-      <Searchbox /> 
-      <button onClick={addPokemon}>Add Pokemon</button>
-      <button onClick={generateRandomTeam}>Generate Random Team</button>
-      <Container>
-        <Row>
-          {pokemonEggs.map((pokemon, i) => (
-            <Col key={i}>
-              {pokemon.url ? (
-                <>
-                <img
-                  key={`pokemon-${i}`}
-                  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.url.substring(
-                    34,
-                    34 + Math.abs(pokemon.url.length - 36 + 1)
-                  )}.png`}
-                  alt="pokemon"
-                />
-                    <p>{pokemon.name}</p>
-                </>
-                
-              ) : (
-                <img
-                    width="200px"
-                    height="auto"
-                  src={require("../assets/PokemonEgg.webp")}
-                  alt="pokemon-egg"
-                />
-              )}
-            </Col>
-          ))}
-        </Row>
-      </Container>
+      <div style={{"margin-top": "7rem"}}>
+          <Searchbox /> 
+          <button onClick={addPokemon}>Add Pokemon</button>
+          <button onClick={generateRandomTeam}>Generate Random Team</button>
+          <Container>
+            <Row>
+              {pokemonEggs.map((pokemon, i) => (
+                <Col key={i}>
+                  {pokemon.url ? (
+                    <>
+                    <img
+                      key={`pokemon-${i}`}
+                      src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.url.substring(
+                        34,
+                        34 + Math.abs(pokemon.url.length - 36 + 1)
+                      )}.png`}
+                      alt="pokemon"
+                    />
+                        <p>{pokemon.name}</p>
+                    </>
+                    
+                  ) : (
+                    <img
+                        width="200px"
+                        height="auto"
+                      src={require("../assets/PokemonEgg.webp")}
+                      alt="pokemon-egg"
+                    />
+                  )}
+                </Col>
+              ))}
+            </Row>
+          </Container>
+      </div>
     </>
   );
 };

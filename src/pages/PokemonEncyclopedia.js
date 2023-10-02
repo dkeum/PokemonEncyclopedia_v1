@@ -3,6 +3,8 @@ import { useState, useEffect, useCallback} from "react";
 import LoadPokemonData from "../components/LoadPokemonCard";
 import Searchbox from "../components/SearchBox";
 
+
+
 const PokemonEncyclopedia = () => {
   const [pokemon, setPokemon] = useState("");
   const [pokemonData, setPokemonData] = useState([]);
@@ -39,12 +41,14 @@ const PokemonEncyclopedia = () => {
 
   return (
     <>
-      <Searchbox searchPokemon={searchPokemon} pokemon={pokemon} />
-      {pokemon ? (
-        <LoadPokemonData pokemons={pokemonSearchData} />
-      ) : (
-        <LoadPokemonData pokemons={pokemonData.slice(0,100)} />
-      )}
+      <div style={{"margin-top": "6rem !important"}}>
+          <Searchbox searchPokemon={searchPokemon} pokemon={pokemon} />
+          {pokemon ? (
+            <LoadPokemonData pokemons={pokemonSearchData} />
+          ) : (
+            <LoadPokemonData pokemons={pokemonData.slice(0,100)} />
+          )}
+      </div>
     </>
   );
 };

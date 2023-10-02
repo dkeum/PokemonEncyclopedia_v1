@@ -77,6 +77,7 @@ const GuessThePokemonImage = () =>{
 
     return(
         <>
+            <div style={{"margin-top": "6rem"}}>
              <h1>Who's that Pokemon</h1>
 
              { randomPokemonURL && numOfTries === 0 &&
@@ -101,6 +102,7 @@ const GuessThePokemonImage = () =>{
                 />
              </form>}
              {numOfTries === 0 && <button onClick={buttonHandler}>Play Again?</button>}
+             </div>
         </>
     );
 }

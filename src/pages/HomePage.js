@@ -1,8 +1,15 @@
 import MainContent from "../components/MainContent";
 
+import "../css/homepage.css"
+
 const HomePage = () =>{
     return(
-        <MainContent/>
+       
+                <div className="main-content">
+                    <MainContent/>
+                </div>
+        
+     
     );
 }
 

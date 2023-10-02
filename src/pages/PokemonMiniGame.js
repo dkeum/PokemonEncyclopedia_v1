@@ -71,6 +71,7 @@ const PokemonMiniGame = () =>{
 
     return(
         <>
+        <div style={{"margin-top": "6rem "}}>
              <h1>Who's that Pokemon</h1>
                 { randomPokemonURL && numOfTries !== 0
                 ?<img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${randomPokemonURL.substring(34, 34+Math.abs(randomPokemonURL.length-36+1))}.png`} alt="guess the pokemon"/>
@@ -96,6 +97,7 @@ const PokemonMiniGame = () =>{
                 }
             
              {numOfTries === 0 && <button onClick={buttonHandler}>Play Again?</button>}
+             </div>
         </>
     );
 }

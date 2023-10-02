@@ -108,40 +108,42 @@ const GuessThePokemonWord = () => {
 
   return (
     <>
-      <h1>Who's that Pokemon</h1>
+    <div style={{"margin-top": "7rem"}}>
+          <h1>Who's that Pokemon</h1>
 
-      {gameEnded === true && <button onClick={buttonHandler}>Play Again?</button>}
+          {gameEnded === true && <button onClick={buttonHandler}>Play Again?</button>}
 
-      <div className="pokemon-name">
-        {randomPokemon &&
-          randomPokemon.split("").map((letter, index) => (
-            <div key={index}>
-              <input
-                ref={(el) => (inputRefs[index] = el)}
-                className={`letter-box text-center ${allGuessedPokemons.length === 0 ? "white" : ""}`}
-                type="text"
-                value={guessedPokemon === "" ? "" : guessedPokemon[index] }
-                onChange={(e) => handleInputChange(e, index)}
-                maxLength={1}
-              />
-            </div>
-          ))}
-      </div>
-
-      <div className="guessed-pokemons">
-        <Container>
-          {allLetterColors.map((guessword, guessIndex) => (
-            <Row key={guessIndex} className="d-flex justify-content-center">
-              {guessword.map((guessletter, letterIndex) => (
-                <Col key={letterIndex + guessIndex} style={{ width: "10px" }}>
-                  <div className="letter-box text-center" style={{ backgroundColor: guessletter.color }}>
-                    {guessletter.letter}
-                  </div>
-                </Col>
+          <div className="pokemon-name">
+            {randomPokemon &&
+              randomPokemon.split("").map((letter, index) => (
+                <div key={index}>
+                  <input
+                    ref={(el) => (inputRefs[index] = el)}
+                    className={`letter-box text-center ${allGuessedPokemons.length === 0 ? "white" : ""}`}
+                    type="text"
+                    value={guessedPokemon === "" ? "" : guessedPokemon[index] }
+                    onChange={(e) => handleInputChange(e, index)}
+                    maxLength={1}
+                  />
+                </div>
               ))}
-            </Row>
-          ))}
-        </Container>
+          </div>
+
+          <div className="guessed-pokemons">
+            <Container>
+              {allLetterColors.map((guessword, guessIndex) => (
+                <Row key={guessIndex} className="d-flex justify-content-center">
+                  {guessword.map((guessletter, letterIndex) => (
+                    <Col key={letterIndex + guessIndex} style={{ width: "10px" }}>
+                      <div className="letter-box text-center" style={{ backgroundColor: guessletter.color }}>
+                        {guessletter.letter}
+                      </div>
+                    </Col>
+                  ))}
+                </Row>
+              ))}
+            </Container>
+          </div>
       </div>
     </>
   );
