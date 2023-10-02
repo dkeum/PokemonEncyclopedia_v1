@@ -88,6 +88,7 @@ const GuessThePokemonWord = () => {
     if (inputRefs[0]) {
       inputRefs[0].focus();
     }
+    console.log(randomPokemon);
   };
 
   const buttonHandler = () => {

@@ -72,23 +72,30 @@ const PokemonMiniGame = () =>{
     return(
         <>
              <h1>Who's that Pokemon</h1>
-             { randomPokemonURL 
+                { randomPokemonURL && numOfTries !== 0
                 ?<img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${randomPokemonURL.substring(34, 34+Math.abs(randomPokemonURL.length-36+1))}.png`} alt="guess the pokemon"/>
-                :<img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png`} alt="guess the pokemon"/>}
+                :<></>}
+
+                { randomPokemonURL && numOfTries === 0 &&
+                    <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${randomPokemonURL.substring(34, 34+Math.abs(randomPokemonURL.length-36+1))}.png`} alt="guess the pokemon"/>
+                }   
              
              {/* {console.log(`This is the random pokemon: ${randomPokemon}`)}
              {console.log(`This is the random pokemon url: ${randomPokemonURL}`)} */}
          
              
-             <form onSubmit={onSubmitHandler}>
-             <input 
-                type="text"
-                placeholder="Guess the Pokemon here"
-                value={guessedPokemon}
-                onChange={(e) => setGuessedPokemon(e.target.value)} // Update state when input changes
-                />
-                {numOfTries === 0 && <button onClick={buttonHandler}>Play Again?</button>}
-             </form>
+                {numOfTries !== 0 &&
+                    <form onSubmit={onSubmitHandler}>
+                    <input 
+                        type="text"
+                        placeholder="Guess the Pokemon here"
+                        value={guessedPokemon}
+                        onChange={(e) => setGuessedPokemon(e.target.value)} // Update state when input changes
+                        />
+                    </form>
+                }
+            
+             {numOfTries === 0 && <button onClick={buttonHandler}>Play Again?</button>}
         </>
     );
 }
