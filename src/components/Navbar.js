@@ -10,8 +10,8 @@ const NavBar = () => {
     <div id="nav-wrapper">
       <Navbar id="nav" expand="lg" className="bg-primary bg-gradient">
 
-      <div class="nav left">
-        <span class="gradient skew pt-1">
+      <div className="nav left">
+        <span className="gradient skew pt-1">
             <Navbar.Brand>
               <img
                 width="85"
@@ -24,33 +24,33 @@ const NavBar = () => {
           </span>
         </div>
 
-        <div class="nav right">
+        <div className="nav right">
           <Navbar.Toggle aria-controls="basic-navbar-nav"/>
           <Navbar.Collapse id="basic-navbar-nav">
             <Col xs="2" className="d-flex align-items-center">
               <div className="ms-5">
                 <Nav className="me-auto">
                   
-                  <div class="nav-link active">
+                  <div className="nav-link active">
                     <LinkContainer to="/PokemonEncyclopedia_v1">
                         <Nav.Link className=" nav-link-span">Home</Nav.Link>
                     </LinkContainer>
                   </div>
 
-                  <div class="nav-link active">
+                  <div className="nav-link active">
                     <LinkContainer to="/PokemonEncyclopedia_v1/pokemonencyclopedia">  
                         <Nav.Link className="nav-link-span">Pokedex</Nav.Link>
                     </LinkContainer>
                   </div>
 
-                  <div class="nav-link active">
+                  <div className="nav-link active">
                     <LinkContainer to="/PokemonEncyclopedia_v1/team-builder">
                       <Nav.Link className="nav-link-span">Team Builder</Nav.Link>
                     </LinkContainer>
                   </div>
 
 
-                  <div  class="nav mt-2 skew ms-2 "style={{"line-height": "5em"}} >
+                  <div  className="nav mt-2 skew ms-2 "style={{"lineHeight": "5em"}} >
                     <NavDropdown
                       title="MiniGames"
                       id="basic-nav-dropdown"

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import React from "react";
+import '../css/pokemoninfo.css'
 
 const PokemonInfo = () =>{
   const {pokemonId} = useParams();
@@ -25,13 +26,21 @@ const PokemonInfo = () =>{
 
     return(
         <>
-        <h1>Inside the pokemon info</h1>
-          {pokemonData &&<img src={pokemonData.sprites.front_default} alt="pokemon"/>}
+        <div className="d-flex flex-column" style={{"margin-top": "6rem"}}>
+
+          {
+            <h1 className="text-center mt-5">It's {pokemonData && pokemonData.forms[0].name.charAt(0).toUpperCase() + pokemonData.forms[0].name.slice(1)}</h1>
+          }
+          <div className="d-flex justify-content-center">
+          {pokemonData && <img  className="justify-content-center" width="300px" height="300px" src={pokemonData.sprites.front_default} alt="pokemon"/>}
+          </div>
+          
           {pokemonData &&
-              <table className="table">
+              <table className="table table-striped table-hover custom-table mb-4 mt-2">
               <thead>
                 <tr>
-                  <th scope="col">Category</th>
+                  <th scope="col">Categories</th>
+                  <th scope="col">Value</th>
                 </tr>
               </thead>
               <tbody>
@@ -48,7 +57,7 @@ const PokemonInfo = () =>{
                 </tr>
                 <tr>
                   <th scope="row">Height</th>
-                  <td>{Math.round(pokemonData.height * 3.9)}</td>
+                  <td>{((pokemonData.height * 3.9)/39.37).toFixed(3)} m</td>
                 </tr>
                 <tr>
                   <th scope="row">Weight</th>
@@ -61,7 +70,7 @@ const PokemonInfo = () =>{
             
           }
                   
-    
+          </div>
         </>
     );
 }

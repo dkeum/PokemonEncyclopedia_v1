@@ -1,5 +1,6 @@
 import { useState, useEffect} from "react";
 import axios from "axios";
+import { Container,Row,Col } from "react-bootstrap";
 
 const GuessThePokemonImage = () =>{
 
@@ -77,31 +78,56 @@ const GuessThePokemonImage = () =>{
 
     return(
         <>
-            <div style={{"margin-top": "6rem"}}>
-             <h1>Who's that Pokemon</h1>
+            <div style={{"margin-top": "10rem"}}>
+             <h1 className="text-center">Who's that Pokemon</h1>
 
-             { randomPokemonURL && numOfTries === 0 &&
-                <>
-                    <img width="300px" height="300px" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${randomPokemonURL.substring(34, 34+Math.abs(randomPokemonURL.length-36+1))}.png`} alt="guess the pokemon"/>
-                    <h1>It's {randomPokemon} !!!</h1>
-                </>
-             }
 
-             { randomPokemonURL && numOfTries !== 0
-                ?<img style={imageStyle} src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${randomPokemonURL.substring(34, 34+Math.abs(randomPokemonURL.length-36+1))}.png`} alt="guess the pokemon"/>
-                : <></>// :  <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png`} alt="guess the pokemon"/>
-                  }
+            <Container>
+              <Row>
+                <Col className="d-flex justify-content-center">
+                    { randomPokemonURL && numOfTries === 0 &&
+                    <>
+                        <img width="300px" height="300px" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${randomPokemonURL.substring(34, 34+Math.abs(randomPokemonURL.length-36+1))}.png`} alt="guess the pokemon"/>
+                        <h1>It's {randomPokemon} !!!</h1>
+                    </>
+                }
+
+                { randomPokemonURL && numOfTries !== 0
+                    ?<img style={imageStyle} src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${randomPokemonURL.substring(34, 34+Math.abs(randomPokemonURL.length-36+1))}.png`} alt="guess the pokemon"/>
+                    : <></>// :  <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/0.png`} alt="guess the pokemon"/>
+                      }
+                </Col>
+              </Row>
+
+              <Row>
+                <Col className="d-flex justify-content-end mb-5 mt-5">
+                      {numOfTries !== 0 && 
+                  <form onSubmit={onSubmitHandler}>
+                  <input 
+                      type="text"
+                      placeholder="Guess the Pokemon here"
+                      value={guessedPokemon}
+                      onChange={(e) => setGuessedPokemon(e.target.value)} // Update state when input changes
+                      />
+                  </form>}
+                  {numOfTries === 0 && <button onClick={buttonHandler}>Play Again?</button>}
+                </Col>
+
+                
+                <Col className="d-flex flex-column justify-content-end">
+                                    {numOfTries >= 5 && <img className="img-life" width="80px" height="80px" src={require(`../assets/heartlife.png`)} alt="heart life"/>}
+                                    {numOfTries >= 4 && <img className="img-life" width="80px" height="80px" src={require(`../assets/heartlife.png`)} alt="heart life"/>}
+                                    {numOfTries >= 3 && <img className="img-life" width="80px" height="80px" src={require(`../assets/heartlife.png`)} alt="heart life"/>}
+                                    {numOfTries >= 2 && <img className="img-life" width="80px" height="80px" src={require(`../assets/heartlife.png`)} alt="heart life"/>}
+                                    {numOfTries >= 1 && <img className="img-life" width="80px" height="80px" src={require(`../assets/heartlife.png`)} alt="heart life"/>}
+                </Col>
+                
+              </Row>
+
+            </Container>
              
-             {numOfTries !== 0 && 
-             <form onSubmit={onSubmitHandler}>
-             <input 
-                type="text"
-                placeholder="Guess the Pokemon here"
-                value={guessedPokemon}
-                onChange={(e) => setGuessedPokemon(e.target.value)} // Update state when input changes
-                />
-             </form>}
-             {numOfTries === 0 && <button onClick={buttonHandler}>Play Again?</button>}
+             
+    
              </div>
         </>
     );

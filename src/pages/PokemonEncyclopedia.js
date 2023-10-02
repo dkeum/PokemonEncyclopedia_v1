@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect, useCallback} from "react";
 import LoadPokemonData from "../components/LoadPokemonCard";
 import Searchbox from "../components/SearchBox";
+import { Col, Container, Row } from "react-bootstrap";
 
 
 
@@ -41,13 +42,36 @@ const PokemonEncyclopedia = () => {
 
   return (
     <>
-      <div style={{"margin-top": "6rem"}}>
-          <Searchbox searchPokemon={searchPokemon} pokemon={pokemon} />
-          {pokemon ? (
-            <LoadPokemonData pokemons={pokemonSearchData} />
-          ) : (
-            <LoadPokemonData pokemons={pokemonData.slice(0,100)} />
-          )}
+      <div style={{"marginTop": "10rem"}}>
+
+          <div>
+            <Container>
+              <Row>
+                <Col>
+                  <div className="d-flex text-center flex-column">
+                   <Row>
+                    <h1>PokeDex</h1>
+                    <span className="mt-2" >Search for Pokemon</span>
+                   </Row>
+                   <Row className="justify-content-center">
+                   <Searchbox searchPokemon={searchPokemon} pokemon={pokemon} />
+                   </Row>
+                   </div>
+                </Col>
+              </Row>
+            
+           
+            </Container>
+            
+          </div >
+
+          <div className="mt-5">
+            {pokemon ? (
+              <LoadPokemonData pokemons={pokemonSearchData} />
+            ) : (
+              <LoadPokemonData pokemons={pokemonData.slice(0,100)} />
+            )}
+          </div>
       </div>
     </>
   );

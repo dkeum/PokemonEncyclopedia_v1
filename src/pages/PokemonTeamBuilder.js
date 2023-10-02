@@ -53,6 +53,8 @@ const PokemonTeamBuilder = () => {
     <>
     {/* searchPokemon={searchPokemon} pokemon={pokemon} */}
       <div style={{"margin-top": "7rem"}}>
+
+          <h1>Pokemon Team Builder</h1>
           <Searchbox /> 
           <button onClick={addPokemon}>Add Pokemon</button>
           <button onClick={generateRandomTeam}>Generate Random Team</button>

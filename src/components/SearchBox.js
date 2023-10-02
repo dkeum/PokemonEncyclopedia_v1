@@ -1,3 +1,5 @@
+import "../css/searchbox.css"
+
 const Searchbox = ({searchPokemon, pokemon}) => {
 
     return(
@@ -6,6 +8,7 @@ const Searchbox = ({searchPokemon, pokemon}) => {
                 placeholder="Search"
                 value={pokemon}
                 onChange={(e) => searchPokemon(e.target.value)}
+                className="search-box"
                 />
         </>
 
