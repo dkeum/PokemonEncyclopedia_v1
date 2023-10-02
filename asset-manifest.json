@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/PokemonEncyclopedia_v1/static/css/main.423766c4.css",
-    "main.js": "/PokemonEncyclopedia_v1/static/js/main.7dbd854d.js",
+    "main.css": "/PokemonEncyclopedia_v1/static/css/main.28c1a42d.css",
+    "main.js": "/PokemonEncyclopedia_v1/static/js/main.1979bf2f.js",
     "static/js/787.d7ba30b7.chunk.js": "/PokemonEncyclopedia_v1/static/js/787.d7ba30b7.chunk.js",
     "static/media/venusaur-mega.gif": "/PokemonEncyclopedia_v1/static/media/venusaur-mega.7194eb45a12e0816e1e5.gif",
     "static/media/blastoise-mega.gif": "/PokemonEncyclopedia_v1/static/media/blastoise-mega.4651c0eeb2c874112962.gif",
     "static/media/charizard.gif": "/PokemonEncyclopedia_v1/static/media/charizard.4a3a9bf3987d5d872811.gif",
+    "static/media/pokemonball.png": "/PokemonEncyclopedia_v1/static/media/pokemonball.7c9d2f46d068616c098a.png",
+    "static/media/PokemonEgg.webp": "/PokemonEncyclopedia_v1/static/media/PokemonEgg.2e76236e694decccddea.webp",
     "index.html": "/PokemonEncyclopedia_v1/index.html",
-    "main.423766c4.css.map": "/PokemonEncyclopedia_v1/static/css/main.423766c4.css.map",
-    "main.7dbd854d.js.map": "/PokemonEncyclopedia_v1/static/js/main.7dbd854d.js.map",
+    "main.28c1a42d.css.map": "/PokemonEncyclopedia_v1/static/css/main.28c1a42d.css.map",
+    "main.1979bf2f.js.map": "/PokemonEncyclopedia_v1/static/js/main.1979bf2f.js.map",
     "787.d7ba30b7.chunk.js.map": "/PokemonEncyclopedia_v1/static/js/787.d7ba30b7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.423766c4.css",
-    "static/js/main.7dbd854d.js"
+    "static/css/main.28c1a42d.css",
+    "static/js/main.1979bf2f.js"
   ]
 }
