@@ -41,7 +41,7 @@ const PokemonEncyclopedia = () => {
 
   return (
     <>
-      <div style={{"margin-top": "6rem !important"}}>
+      <div style={{"margin-top": "6rem"}}>
           <Searchbox searchPokemon={searchPokemon} pokemon={pokemon} />
           {pokemon ? (
             <LoadPokemonData pokemons={pokemonSearchData} />

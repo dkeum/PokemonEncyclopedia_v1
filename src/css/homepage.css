@@ -67,3 +67,19 @@
         transform: translateX(0.25);
     }
 }
+
+.image-container {
+    position: relative;
+    /* Set the desired dimensions for the container */
+  }
+  
+  .image-container button {
+    position: absolute;
+    color:white;
+    border: solid whitesmoke 4px;
+    border-radius: 10px;
+    bottom: 80px; /* Adjust as needed to position the button vertically */
+    left: 50%; /* Position button horizontally at the center */
+    transform: translateX(-50%); /* Center the button horizontally */
+    z-index: 1; /* Ensure the button appears above the image */
+  }
