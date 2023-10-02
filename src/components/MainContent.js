@@ -7,7 +7,7 @@ const MainContent = () => {
   return (
     <>
       <div className="background-animation">
-        <Container>
+        <Container style={{height:"90vh"}}>
           <Row>
             <Col>
               <h1 className="text-center mt-5">Welcome to Pokemon Encyclopedia</h1>
