@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PokemonEncyclopedia_v1/static/css/main.55aecf70.css",
-    "main.js": "/PokemonEncyclopedia_v1/static/js/main.82842588.js",
+    "main.js": "/PokemonEncyclopedia_v1/static/js/main.829d7834.js",
     "static/js/787.d7ba30b7.chunk.js": "/PokemonEncyclopedia_v1/static/js/787.d7ba30b7.chunk.js",
     "static/media/venusaur-mega.gif": "/PokemonEncyclopedia_v1/static/media/venusaur-mega.7194eb45a12e0816e1e5.gif",
     "static/media/blastoise-mega.gif": "/PokemonEncyclopedia_v1/static/media/blastoise-mega.4651c0eeb2c874112962.gif",
@@ -11,11 +11,11 @@
     "static/media/PokemonEgg.webp": "/PokemonEncyclopedia_v1/static/media/PokemonEgg.2e76236e694decccddea.webp",
     "index.html": "/PokemonEncyclopedia_v1/index.html",
     "main.55aecf70.css.map": "/PokemonEncyclopedia_v1/static/css/main.55aecf70.css.map",
-    "main.82842588.js.map": "/PokemonEncyclopedia_v1/static/js/main.82842588.js.map",
+    "main.829d7834.js.map": "/PokemonEncyclopedia_v1/static/js/main.829d7834.js.map",
     "787.d7ba30b7.chunk.js.map": "/PokemonEncyclopedia_v1/static/js/787.d7ba30b7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.55aecf70.css",
-    "static/js/main.82842588.js"
+    "static/js/main.829d7834.js"
   ]
 }
