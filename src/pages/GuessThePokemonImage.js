@@ -78,7 +78,7 @@ const GuessThePokemonImage = () =>{
 
     return(
         <>
-            <div style={{"margin-top": "10rem"}}>
+            <div style={{"marginTop": "10rem"}}>
              <h1 className="text-center">Who's that Pokemon</h1>
 
 

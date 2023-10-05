@@ -108,7 +108,7 @@ const GuessThePokemonWord = () => {
 
   return (
     <>
-    <div style={{"margin-top": "7rem"}}>
+    <div style={{"marginTop": "7rem"}}>
           <h1>Who's that Pokemon</h1>
 
           {gameEnded === true && <button onClick={buttonHandler}>Play Again?</button>}

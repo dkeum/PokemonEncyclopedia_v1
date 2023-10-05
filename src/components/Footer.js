@@ -8,8 +8,9 @@ const Footer= () =>{
       <MDBContainer className='p-4'></MDBContainer>
 
       <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-        Authors: Daniel, Amir 
-        
+        Authors: Daniel
+        <br/>
+        Email: onlyfortok@gmail.com
       </div>
     </MDBFooter>
     );

@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import React from "react";
+import AddCommentForm from "../components/AddCommentsForm";
+import CommentsList from "../components/CommentList";
 import '../css/pokemoninfo.css'
 
 const PokemonInfo = () =>{
   const {pokemonId} = useParams();
   const [pokemonData, setPokemonData] = useState(null);
+  const [pokemonInfo, setPokemonInfo] = useState({upvotes: 0, comments: [{postedBy:"Bob" , text:"nice pokemon"}]});
   
   
   useEffect(() => {
@@ -24,9 +27,33 @@ const PokemonInfo = () =>{
 },[]);
 
 
+  useEffect(()=>{
+    const loadPokemonInfo = async () => {
+      // const token = user && await user.getIdToken();
+      // const headers = token ? { authtoken: token } : {};
+      const response = await axios.get(`/api/PokemonEncyclopedia_v1/pokemonencyclopedia/${pokemonId}/`);
+      const newPokemonInfo = response.data;
+      console.log(response.data);
+      if(response.data !== "Pokemon doesnt exist yet" ){
+          setPokemonInfo(newPokemonInfo);
+      }
+    }
+    loadPokemonInfo();
+  },[pokemonId]);
+
+
+  const buttonHandler = async() =>{
+    const response = await axios.put(`/api/PokemonEncyclopedia_v1/pokemonencyclopedia/${pokemonId}/upvote`, null);
+    setPokemonInfo({...pokemonInfo , upvotes : response.data.upvotes})
+    // console.log(response.data);
+  }
+
+
+
+
     return(
         <>
-        <div className="d-flex flex-column" style={{"margin-top": "6rem"}}>
+        <div className="d-flex flex-column" style={{"marginTop": "10rem"}}>
 
           {
             <h1 className="text-center mt-5">It's {pokemonData && pokemonData.forms[0].name.charAt(0).toUpperCase() + pokemonData.forms[0].name.slice(1)}</h1>
@@ -64,10 +91,19 @@ const PokemonInfo = () =>{
                   <td>{Math.round(pokemonData.weight / 4.3)} lbs</td>
                 </tr>
               </tbody>
-            </table>
-            
-            
-            
+            </table>  
+          }
+
+
+          <button onClick={buttonHandler}>Upvote</button>
+          
+          <AddCommentForm pokemonId={pokemonId} onCommentAdded={(updatedPokemon) => setPokemonInfo(updatedPokemon)} />
+
+          {pokemonInfo &&
+          <>
+            <h1>Upvotes: {pokemonInfo.upvotes}</h1>
+            <CommentsList comments={pokemonInfo.comments} />
+          </>
           }
                   
           </div>
