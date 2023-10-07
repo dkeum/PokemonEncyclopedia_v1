@@ -111,7 +111,16 @@ const GuessThePokemonWord = () => {
     <div style={{"marginTop": "7rem"}}>
           <h1>Who's that Pokemon</h1>
 
-          {gameEnded === true && <button onClick={buttonHandler}>Play Again?</button>}
+          {gameEnded === true && 
+          <>
+          <div className="d-flex flex align-items-start text-center">
+            <p>You're right the pokemon is {randomPokemon}</p>
+            <button className="btn btn-primary mb-4 ms-4" onClick={buttonHandler}>Play Again?</button>
+          </div>
+            
+          </>
+          
+          }
 
           <div className="pokemon-name">
             {randomPokemon &&

@@ -25,24 +25,34 @@ const AddCommentForm = ({ pokemonId, onCommentAdded }) => {
   return (
     <div id="add-comment-form">
       <h3>Add a Comment</h3>
-      <label>
-        <input
-          type="text"
-          placeholder="Enter your name here"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-      </label>
-      <label>
-        <textarea
-          value={commentText}
-          placeholder="Enter your comment here"
-          onChange={(e) => setCommentText(e.target.value)}
-          rows="4"
-          cols="50"
-        />
-      </label>
-      <button onClick={addComment}>Add Comment</button>
+      <div className="row gap-3">
+        <div className="col-12 col-md-6">
+          <label>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Enter your name here"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </label>
+        </div>
+        <div className="col-12 col-md-6">
+          <label>
+            <textarea
+              className="form-control"
+              value={commentText}
+              placeholder="Enter your comment here"
+              onChange={(e) => setCommentText(e.target.value)}
+              rows="4"
+              cols="50"
+            />
+          </label>
+        </div>
+      </div>
+      <div className="text-center">
+        <button className="btn btn-primary" onClick={addComment}>Add Comment</button>
+      </div>
     </div>
   );
 };
