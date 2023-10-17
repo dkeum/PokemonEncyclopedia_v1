@@ -1,6 +1,6 @@
-// import express from "express";
+import express from "express";
 // import {db,connectToDb} from './src/db.js'
-// import 'dotenv/config';
+import 'dotenv/config';
 // import cors from "cors";
 
 
@@ -106,7 +106,7 @@
 
 
 // Import packages
-const express = require("express");
+// const express = require("express");
 
 
 // Middlewares
