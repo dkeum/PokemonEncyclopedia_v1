@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "pokemon-encyclopedia-theta.vercel.app/static/css/main.05032b3e.css",
-    "main.js": "pokemon-encyclopedia-theta.vercel.app/static/js/main.ae1c0dba.js",
-    "static/js/787.d7ba30b7.chunk.js": "pokemon-encyclopedia-theta.vercel.app/static/js/787.d7ba30b7.chunk.js",
-    "static/media/venusaur-mega.gif": "pokemon-encyclopedia-theta.vercel.app/static/media/venusaur-mega.7194eb45a12e0816e1e5.gif",
-    "static/media/blastoise-mega.gif": "pokemon-encyclopedia-theta.vercel.app/static/media/blastoise-mega.4651c0eeb2c874112962.gif",
-    "static/media/charizard.gif": "pokemon-encyclopedia-theta.vercel.app/static/media/charizard.4a3a9bf3987d5d872811.gif",
-    "static/media/openpokeball.png": "pokemon-encyclopedia-theta.vercel.app/static/media/openpokeball.1bceb4eb3f3ca956f440.png",
-    "static/media/pokemonball.png": "pokemon-encyclopedia-theta.vercel.app/static/media/pokemonball.7c9d2f46d068616c098a.png",
-    "static/media/heartlife.png": "pokemon-encyclopedia-theta.vercel.app/static/media/heartlife.90601f2e37eb27556bc4.png",
-    "static/media/heartlife_empty.png": "pokemon-encyclopedia-theta.vercel.app/static/media/heartlife_empty.fd908724db4df89eb66a.png",
-    "static/media/PokemonEgg.webp": "pokemon-encyclopedia-theta.vercel.app/static/media/PokemonEgg.2e76236e694decccddea.webp",
-    "index.html": "pokemon-encyclopedia-theta.vercel.app/index.html",
-    "main.05032b3e.css.map": "pokemon-encyclopedia-theta.vercel.app/static/css/main.05032b3e.css.map",
-    "main.ae1c0dba.js.map": "pokemon-encyclopedia-theta.vercel.app/static/js/main.ae1c0dba.js.map",
-    "787.d7ba30b7.chunk.js.map": "pokemon-encyclopedia-theta.vercel.app/static/js/787.d7ba30b7.chunk.js.map"
+    "main.css": "/static/css/main.05032b3e.css",
+    "main.js": "/static/js/main.ea38cf3b.js",
+    "static/js/787.d7ba30b7.chunk.js": "/static/js/787.d7ba30b7.chunk.js",
+    "static/media/venusaur-mega.gif": "/static/media/venusaur-mega.7194eb45a12e0816e1e5.gif",
+    "static/media/blastoise-mega.gif": "/static/media/blastoise-mega.4651c0eeb2c874112962.gif",
+    "static/media/charizard.gif": "/static/media/charizard.4a3a9bf3987d5d872811.gif",
+    "static/media/openpokeball.png": "/static/media/openpokeball.1bceb4eb3f3ca956f440.png",
+    "static/media/pokemonball.png": "/static/media/pokemonball.7c9d2f46d068616c098a.png",
+    "static/media/heartlife.png": "/static/media/heartlife.90601f2e37eb27556bc4.png",
+    "static/media/heartlife_empty.png": "/static/media/heartlife_empty.fd908724db4df89eb66a.png",
+    "static/media/PokemonEgg.webp": "/static/media/PokemonEgg.2e76236e694decccddea.webp",
+    "index.html": "/index.html",
+    "main.05032b3e.css.map": "/static/css/main.05032b3e.css.map",
+    "main.ea38cf3b.js.map": "/static/js/main.ea38cf3b.js.map",
+    "787.d7ba30b7.chunk.js.map": "/static/js/787.d7ba30b7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.05032b3e.css",
-    "static/js/main.ae1c0dba.js"
+    "static/js/main.ea38cf3b.js"
   ]
 }
