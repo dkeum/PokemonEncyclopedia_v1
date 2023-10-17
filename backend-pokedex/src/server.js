@@ -1,13 +1,24 @@
 import express from "express";
 import {db,connectToDb} from './db.js'
 import 'dotenv/config';
+import cors from "cors";
 
 
 const app = express();
+
+app.use(cors(
+    {
+        origin: ["https://pokemonencyclopedia.vercel.app"],
+        methods: ["POST","PUT","GET"],
+        credentials: true
+    }
+));
+
 app.use(express.json());
 
-
-
+app.get('/', (req,res)=>{
+    res.send("Api is working");
+})
 
 app.get('/api/PokemonEncyclopedia_v1/pokemonencyclopedia/:pokemonId/', async (req,res)=>{
     let {pokemonId} = req.params;
@@ -82,9 +93,6 @@ app.post('/api/PokemonEncyclopedia_v1/pokemonencyclopedia/:pokemonId/comments', 
 
     
 });
-
-
-
 
 
 const PORT = process.env.PORT || 8000; 
