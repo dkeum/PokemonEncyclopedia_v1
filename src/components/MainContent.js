@@ -11,9 +11,11 @@ const MainContent = () => {
           <Row>
             <Col>
               <h1 className="text-center mt-5">Welcome to Pokemon Encyclopedia</h1>
-              <div className="d-flex justify-content-center mt-5 image-container">
+              <div className="d-flex position-relative justify-content-center mt-5 image-container ">
                 <img src={require("../assets/openpokeball.png")} alt="Pokemon" />
-                <button onClick={() => { navigate('/PokemonEncyclopedia_v1/pokemonencyclopedia') }}> Learn more </button>
+                <button className="border-0" onClick={() => { navigate('/PokemonEncyclopedia_v1/pokemonencyclopedia') }}>
+                  <p className="flex font-weight-bold align-center pt-3" ><b> Enter</b></p>  
+                </button>
               </div>
             </Col>
           </Row>

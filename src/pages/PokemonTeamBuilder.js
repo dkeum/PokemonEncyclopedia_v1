@@ -2,6 +2,7 @@ import Searchbox from "../components/SearchBox";
 import { Container, Col, Row } from "react-bootstrap";
 import { useCallback, useState, useEffect } from "react";
 import axios from "axios";
+import Button from "react-bootstrap/Button"
 
 const PokemonTeamBuilder = () => {
   const [pokemonData, setPokemonData] = useState([]);
@@ -70,15 +71,20 @@ const PokemonTeamBuilder = () => {
 
   return (
     <>
-      <div style={{ marginTop: "10rem" }}>
+      <div className="min-vh-100" style={{ marginTop: "10rem" }}>
+        <div className="ms-5">
         <h1>Pokemon Team Builder</h1>
+        <div className="d-flex flex-row mt-5 gap-5">
         <Searchbox searchPokemon={searchPokemon} pokemon={pokemon} />
-        <button onClick={addPokemon}>Add Pokemon</button>
-        <button onClick={generateRandomTeam}>Generate Random Team</button>
-        <button onClick={restartHandler}>Reset Team</button>
+          <Button variant="primary" onClick={addPokemon}>Add Pokemon</Button>
+          <Button variant="primary" onClick={generateRandomTeam}>Generate Random Team</Button>
+          <Button variant="primary" onClick={restartHandler}>Reset Team</Button>
+        </div>
+
+        </div>
         <Container>
           <Row>
-            <Col className="d-flex flex-row justify-content-center">
+            <Col className="d-flex flex-row justify-content-center mt-5">
               {pokemonEggs.map((pokemon, i) => (
                 <div key={i}>
                   {console.log(pokemon)}

@@ -9,6 +9,7 @@ const Searchbox = ({searchPokemon, pokemon}) => {
                 value={pokemon}
                 onChange={(e) => searchPokemon(e.target.value)}
                 className="search-box"
+                required
             />
         </>
 

@@ -72,7 +72,7 @@ const GuessThePokemonImage = () => {
   };
 
   return (
-    <div style={{ marginTop: "10rem" }}>
+    <div className="min-vh-100" style={{ marginTop: "10rem" }}>
       <h1 className="text-center">Who's that Pokemon</h1>
 
       <Container>

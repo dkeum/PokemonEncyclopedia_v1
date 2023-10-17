@@ -23,9 +23,9 @@ const AddCommentForm = ({ pokemonId, onCommentAdded }) => {
   };
 
   return (
-    <div id="add-comment-form">
-      <h3>Add a Comment</h3>
-      <div className="row gap-3">
+    <div  className="d-flex flex-column gap-5 justify-content-center" id="add-comment-form">
+      <h3 className="text-center">Add a Comment</h3>
+      <div className="row gap-3 justify-content-center">
         <div className="col-12 col-md-6">
           <label>
             <input
@@ -49,9 +49,9 @@ const AddCommentForm = ({ pokemonId, onCommentAdded }) => {
             />
           </label>
         </div>
-      </div>
-      <div className="text-center">
+        <div className="text-center">
         <button className="btn btn-primary" onClick={addComment}>Add Comment</button>
+      </div>
       </div>
     </div>
   );

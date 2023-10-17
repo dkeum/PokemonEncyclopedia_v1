@@ -85,17 +85,18 @@ const PokemonInfo = () => {
       }
 
 <div className="d-grid grid-row gap-3 justify-content-center">
-  <button className="btn btn-primary btn-lg" style={{ width: '150px' }} onClick={buttonHandler}>
-    Upvote
-  </button>
+  <div className="d-flex flex-row gap-5 justify-content-center my-5">
+    <button className="btn btn-primary btn-lg" style={{ width: '150px' }} onClick={buttonHandler}>
+      Upvote
+    </button>
+    <h1>Upvotes: {pokemonInfo.upvotes}</h1>
+
+  </div>
 
   <AddCommentForm pokemonId={pokemonId} onCommentAdded={(updatedPokemon) => setPokemonInfo(updatedPokemon)} />
 </div>
-     
-
       {pokemonInfo &&
         <>
-          <h1>Upvotes: {pokemonInfo.upvotes}</h1>
           <CommentsList comments={pokemonInfo.comments} />
         </>
       }
