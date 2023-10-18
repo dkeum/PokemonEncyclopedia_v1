@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.05032b3e.css",
-    "main.js": "/static/js/main.ea38cf3b.js",
+    "main.js": "/static/js/main.08d52a56.js",
     "static/js/787.d7ba30b7.chunk.js": "/static/js/787.d7ba30b7.chunk.js",
     "static/media/venusaur-mega.gif": "/static/media/venusaur-mega.7194eb45a12e0816e1e5.gif",
     "static/media/blastoise-mega.gif": "/static/media/blastoise-mega.4651c0eeb2c874112962.gif",
@@ -13,11 +13,11 @@
     "static/media/PokemonEgg.webp": "/static/media/PokemonEgg.2e76236e694decccddea.webp",
     "index.html": "/index.html",
     "main.05032b3e.css.map": "/static/css/main.05032b3e.css.map",
-    "main.ea38cf3b.js.map": "/static/js/main.ea38cf3b.js.map",
+    "main.08d52a56.js.map": "/static/js/main.08d52a56.js.map",
     "787.d7ba30b7.chunk.js.map": "/static/js/787.d7ba30b7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.05032b3e.css",
-    "static/js/main.ea38cf3b.js"
+    "static/js/main.08d52a56.js"
   ]
 }
