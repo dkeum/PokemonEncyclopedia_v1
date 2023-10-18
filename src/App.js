@@ -30,6 +30,7 @@ function App() {
               <Route path="/PokemonEncyclopedia_v1/pokemon-word-game" element={<GuessThePokemonWord/>}/>
               <Route path="/login" element={<Login/>}/>
               <Route path="/createaccount" element={<CreateAccount/>}/>
+              <Route path="*" element={<div>Not Found!!!</div>}/>
           </Routes>
         </div>
 

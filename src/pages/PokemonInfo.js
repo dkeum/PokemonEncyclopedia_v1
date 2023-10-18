@@ -5,12 +5,15 @@ import React from "react";
 import AddCommentForm from "../components/AddCommentsForm";
 import CommentsList from "../components/CommentList";
 import '../css/pokemoninfo.css'
+import useUser from "../hooks/useUser";
 
 const PokemonInfo = () => {
   const { pokemonId } = useParams();
   const [pokemonData, setPokemonData] = useState(null);
   const [pokemonInfo, setPokemonInfo] = useState({ upvotes: 0, comments: [{ postedBy: "Bob", text: "nice pokemon" }] });
 
+  const {user, isLoading} = useUser();
+  
   const baseName= "https://pokemon-encyclopedia-backend.vercel.app"; 
 
   // Fetch Pokemon data based on the ID from the URL
