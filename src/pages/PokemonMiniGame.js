@@ -66,7 +66,7 @@ const PokemonMiniGame = () => {
 
   return (
     <>
-      <div className="min-vh-100" style={{ marginTop: "6rem" }}>
+      <div className="min-vh-100" style={{ marginTop: "10rem" }}>
         <Container>
           <Row>
             <Col>

@@ -91,9 +91,12 @@ const PokemonInfo = () => {
 
 <div className="d-grid grid-row gap-3 justify-content-center">
   <div className="d-flex flex-row gap-5 justify-content-center my-5">
-    <button className="btn btn-primary btn-lg" style={{ width: '150px' }} onClick={buttonHandler}>
+    
+    {user ? <button className="btn btn-primary btn-lg" style={{ width: '150px' }} onClick={buttonHandler}>
       Upvote
     </button>
+    : <h1>Login in to Upvote</h1>
+    }
     <h1>Upvotes: {pokemonInfo.upvotes}</h1>
 
   </div>
