@@ -5,9 +5,11 @@ const AddCommentForm = ({ pokemonId, onCommentAdded }) => {
   const [name, setName] = useState('');
   const [commentText, setCommentText] = useState('');
 
+  const baseName= "https://pokemon-encyclopedia-backend.vercel.app"; 
+
   const addComment = async () => {
     try {
-      const res = await axios.post(`/api/PokemonEncyclopedia_v1/pokemonencyclopedia/${pokemonId}/comments`, {
+      const res = await axios.post(`${baseName}/api/PokemonEncyclopedia_v1/pokemonencyclopedia/${pokemonId}/comments`, {
         postedBy: name,
         text: commentText,
       });

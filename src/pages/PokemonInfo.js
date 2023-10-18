@@ -11,6 +11,8 @@ const PokemonInfo = () => {
   const [pokemonData, setPokemonData] = useState(null);
   const [pokemonInfo, setPokemonInfo] = useState({ upvotes: 0, comments: [{ postedBy: "Bob", text: "nice pokemon" }] });
 
+  const baseName= "https://pokemon-encyclopedia-backend.vercel.app"; 
+
   // Fetch Pokemon data based on the ID from the URL
   useEffect(() => {
     const getPokemon = async () => {
@@ -29,7 +31,7 @@ const PokemonInfo = () => {
   // Load additional Pokemon info, including upvotes and comments
   useEffect(() => {
     const loadPokemonInfo = async () => {
-      const response = await axios.get(`/api/PokemonEncyclopedia_v1/pokemonencyclopedia/${pokemonId}/`);
+      const response = await axios.get(`${baseName}/api/PokemonEncyclopedia_v1/pokemonencyclopedia/${pokemonId}/`);
       const newPokemonInfo = response.data;
 
       if (response.data !== "Pokemon doesnt exist yet") {
@@ -41,7 +43,7 @@ const PokemonInfo = () => {
 
   // Handle the upvote button click
   const buttonHandler = async () => {
-    const response = await axios.put(`/api/PokemonEncyclopedia_v1/pokemonencyclopedia/${pokemonId}/upvote`, null);
+    const response = await axios.put(`${baseName}/api/PokemonEncyclopedia_v1/pokemonencyclopedia/${pokemonId}/upvote`, null);
     setPokemonInfo({ ...pokemonInfo, upvotes: response.data.upvotes });
   }
 

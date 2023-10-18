@@ -67,6 +67,14 @@ const NavBar = () => {
                         </LinkContainer>
                     </NavDropdown>
                   </div> 
+
+                  <div className="nav-link active">
+                    <LinkContainer to="/login">  
+                        <Nav.Link className="nav-link-span">Login</Nav.Link>
+                    </LinkContainer>
+                  </div>
+
+
                 </Nav>
               </div>
             </Col>
